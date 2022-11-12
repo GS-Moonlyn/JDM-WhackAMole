@@ -32,14 +32,12 @@ public class GameActivity extends AppCompatActivity {
     private final int GAME_TIMER = 30000; //Tempo máximo de partida
     private Context context;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        context = this;
         setContentView(R.layout.activity_game);
-
-        this.context = this;
         SCORE = 0;
         textScore = findViewById(R.id.textScore);
         moles.add(findViewById(R.id.mole0));
@@ -50,9 +48,7 @@ public class GameActivity extends AppCompatActivity {
         moles.add(findViewById(R.id.mole5));
 
         new CountDownTimer(GAME_TIMER, 1000){
-                public void onTick(long millisUntilFinished){
-
-            }
+                public void onTick(long millisUntilFinished){}
 
             @Override
             public void onFinish() {
@@ -106,7 +102,7 @@ public class GameActivity extends AppCompatActivity {
         } return false;
     }
 
-    public void MoleHit(View view){
+    public void moleHit(View view){
         SCORE++;
         view.setVisibility(View.INVISIBLE);
         timer.cancel();

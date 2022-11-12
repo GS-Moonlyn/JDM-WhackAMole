@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="72dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,11 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="44dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="invisible" />
+        tools:src="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/mole2"
@@ -36,11 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="44dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mole0"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="invisible" />
+        tools:src="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/mole3"
@@ -48,11 +48,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="44dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mole1"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="invisible" />
+        tools:src="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/mole4"
@@ -60,11 +60,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="44dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mole2"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="invisible" />
+        tools:src="@tools:sample/avatars" />
 
     <ImageView
         android:id="@+id/mole5"
@@ -72,11 +72,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="44dp"
-        android:onClick="MoleHit"
+        android:onClick="moleHit"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mole3"
-        tools:src="@tools:sample/avatars"
-        tools:visibility="invisible" />
+        tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textScore"

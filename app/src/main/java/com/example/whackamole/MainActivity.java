@@ -19,11 +19,9 @@ public class MainActivity extends AppCompatActivity {
         btnPlay = findViewById(R.id.btnPlay);
     }
 
-    private void onClick(View view){
-        if(view == btnPlay){
+    public void startGame(View view){
             Intent intent = new Intent(this, GameActivity.class);
             startActivity(intent);
             finish();
-        }
     }
 }
