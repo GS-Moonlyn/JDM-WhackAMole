@@ -3,6 +3,7 @@ package com.example.whackamole;
 import
         androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< Updated upstream
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioAttributes;
@@ -43,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
     private int hit, show;
     private boolean running = false;
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    Button btnPlay;
+>>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         iniciarContagem();
     }
 
+<<<<<<< Updated upstream
     @Override
     protected void onResume() {
         super.onResume();
@@ -189,4 +201,13 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+=======
+    private void onClick(View view){
+        if(view == btnPlay){
+            Intent intent = new Intent(this, GameActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+>>>>>>> Stashed changes
 }
