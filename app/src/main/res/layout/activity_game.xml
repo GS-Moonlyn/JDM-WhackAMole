@@ -85,6 +85,7 @@
         android:layout_marginBottom="56dp"
         android:text="Score: 0"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -4,16 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo1"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#4CAF50"
         android:onClick="startGame"
         android:text="PLAY"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:iconTintMode="src_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="192dp"
+        android:layout_height="138dp"
+        android:fontFamily="@font/fontdiner_swanky"
+        android:text="Whack a Mole!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/material_dynamic_neutral0"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
 </androidx.constraintlayout.widget.ConstraintLayout>
