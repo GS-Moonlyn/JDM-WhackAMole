@@ -27,19 +27,19 @@
         app:layout_constraintVertical_bias="0.895" />
 
     <TextView
-        android:id="@+id/titulo"
-        android:layout_width="192dp"
-        android:layout_height="138dp"
+        android:id="@+id/textTitle"
+        android:layout_width="135dp"
+        android:layout_height="107dp"
         android:fontFamily="@font/fontdiner_swanky"
+        android:foregroundTint="#000000"
         android:text="Whack a Mole!"
         android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/material_dynamic_neutral0"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+        android:textColor="#5A4238"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintVertical_bias="0.443" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
