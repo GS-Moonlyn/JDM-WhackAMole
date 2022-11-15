@@ -103,6 +103,22 @@ public class GameActivity extends AppCompatActivity {
 
     public void moleHit(View view){
         SCORE++;
+        View moleHit;
+        if(view.getId() == R.id.mole0){ moleHit = findViewById(R.id.mole0_hit); }
+        else if(view.getId() == R.id.mole1){ moleHit = findViewById(R.id.mole1_hit); }
+        else if(view.getId() == R.id.mole2){ moleHit = findViewById(R.id.mole2_hit); }
+        else if(view.getId() == R.id.mole3){ moleHit = findViewById(R.id.mole3_hit); }
+        else if(view.getId() == R.id.mole4){ moleHit = findViewById(R.id.mole4_hit); }
+        else { moleHit = findViewById(R.id.mole5_hit); }
+        moleHit.setVisibility(View.VISIBLE);
+
+        new CountDownTimer(40, 500) {
+            @Override
+            public void onTick(long millisUntilFinished) { }
+            @Override
+            public void onFinish() {moleHit.setVisibility(View.INVISIBLE);}
+        }.start();
+
         view.setVisibility(View.INVISIBLE);
         timer.cancel();
     }

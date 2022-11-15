@@ -12,8 +12,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/fundo1" />
 
     <ImageView
@@ -30,6 +32,17 @@
         tools:srcCompat="@drawable/mole" />
 
     <ImageView
+        android:id="@+id/mole0_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="72dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hit_marker" />
+
+    <ImageView
         android:id="@+id/mole1"
         android:layout_width="133dp"
         android:layout_height="133dp"
@@ -41,6 +54,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mole"
         tools:srcCompat="@drawable/mole" />
+
+    <ImageView
+        android:id="@+id/mole1_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="44dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hit_marker" />
 
     <ImageView
         android:id="@+id/mole2"
@@ -56,6 +80,17 @@
         tools:srcCompat="@drawable/mole" />
 
     <ImageView
+        android:id="@+id/mole2_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mole0"
+        app:srcCompat="@drawable/hit_marker" />
+
+    <ImageView
         android:id="@+id/mole3"
         android:layout_width="133dp"
         android:layout_height="133dp"
@@ -67,6 +102,17 @@
         app:layout_constraintTop_toBottomOf="@+id/mole1"
         app:srcCompat="@drawable/mole"
         tools:srcCompat="@drawable/mole" />
+
+    <ImageView
+        android:id="@+id/mole3_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="44dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mole1"
+        app:srcCompat="@drawable/hit_marker" />
 
     <ImageView
         android:id="@+id/mole4"
@@ -82,6 +128,17 @@
         tools:srcCompat="@drawable/mole" />
 
     <ImageView
+        android:id="@+id/mole4_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mole2"
+        app:srcCompat="@drawable/hit_marker" />
+
+    <ImageView
         android:id="@+id/mole5"
         android:layout_width="133dp"
         android:layout_height="133dp"
@@ -93,6 +150,17 @@
         app:layout_constraintTop_toBottomOf="@+id/mole3"
         app:srcCompat="@drawable/mole"
         tools:srcCompat="@drawable/mole" />
+
+    <ImageView
+        android:id="@+id/mole5_hit"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="44dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mole3"
+        app:srcCompat="@drawable/hit_marker" />
 
     <TextView
         android:id="@+id/textScore"
