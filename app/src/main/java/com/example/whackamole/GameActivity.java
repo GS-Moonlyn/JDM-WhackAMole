@@ -81,7 +81,6 @@ public class GameActivity extends AppCompatActivity {
         //lógica de spawn das toupeiras
         if(!isMoleUp()){
             while (rng == lastRNG) { rng = random.nextInt(moles.size()); }
-
             lastRNG = rng;
             moles.get(rng).setVisibility(View.VISIBLE);
 
