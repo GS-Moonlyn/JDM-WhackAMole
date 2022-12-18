@@ -12,6 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -93,6 +96,23 @@ public class GameActivity extends AppCompatActivity {
             };
             timer.start();
         }
+    }
+
+    private void saveScore() {
+
+        try {
+            FileOutputStream fos = this.openFileOutput("score.txt", Context.MODE_APPEND);
+            String strScore = String.valueOf(SCORE).concat("\n");
+            fos.write(strScore.getBytes());
+            fos.close();
+        } catch (FileNotFoundException fnf) {
+
+            fnf.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+
+        }
+
     }
 
     private boolean isMoleUp(){
