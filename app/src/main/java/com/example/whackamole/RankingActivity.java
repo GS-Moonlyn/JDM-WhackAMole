@@ -2,7 +2,9 @@ package com.example.whackamole;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -55,6 +57,12 @@ public class RankingActivity extends AppCompatActivity {
         }
 
         txtScore.setText(String.valueOf(score));
+    }
+
+    public void mainMenu(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 

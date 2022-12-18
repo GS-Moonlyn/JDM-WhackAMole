@@ -55,6 +55,7 @@ public class GameActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                saveScore();
                 Intent intent = new Intent(context, ResultActivity.class);
                 startActivity(intent);
                 finish();
