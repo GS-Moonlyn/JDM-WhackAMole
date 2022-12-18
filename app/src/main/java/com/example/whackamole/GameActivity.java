@@ -2,9 +2,13 @@ package com.example.whackamole;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,6 +35,16 @@ public class GameActivity extends AppCompatActivity {
     private final int MOLE_TIMER = 550; //Tempo de Spawn entre toupeiras
     private final int GAME_TIMER = 30000; //Tempo máximo de partida
     private Context context;
+    private MediaPlayer mediaPlayer;
+    private AudioAttributes audioAttributes = new AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_GAME)
+            .build();
+
+    private SoundPool soundPool = new SoundPool.Builder()
+            .setAudioAttributes(audioAttributes)
+            .setMaxStreams(5)
+            .build();
+    private int id;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,12 +60,19 @@ public class GameActivity extends AppCompatActivity {
         moles.add(findViewById(R.id.mole3));
         moles.add(findViewById(R.id.mole4));
         moles.add(findViewById(R.id.mole5));
+        mediaPlayer = MediaPlayer.create(context, R.raw.bgm);
+        mediaPlayer.start();
+        mediaPlayer.setLooping(true);
+        id = soundPool.load(context, R.raw.hit, 0);
 
         new CountDownTimer(GAME_TIMER, 1000){
                 public void onTick(long millisUntilFinished){}
 
             @Override
             public void onFinish() {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
                 Intent intent = new Intent(context, ResultActivity.class);
                 startActivity(intent);
                 finish();
@@ -121,5 +142,6 @@ public class GameActivity extends AppCompatActivity {
 
         view.setVisibility(View.INVISIBLE);
         timer.cancel();
+        soundPool.play(id, 1, 1 , 0, 0, 1);
     }
 }
